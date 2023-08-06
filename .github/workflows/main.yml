@@ -1,7 +1,5 @@
 name: Integration Test
-on: 
-  label:
-    - created
+on: [push]
 jobs:
   hello:
     runs-on: ubuntu-latest
