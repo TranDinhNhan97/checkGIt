@@ -6,10 +6,10 @@ class ConfigurationError(Exception):
 
 def load_config():
     config = {
-        "GIT_REPO_URL": os.environ.get("INPUT_GIT_REPO_URL", ""),
+        "GIT_REPO_URL": os.environ.get("INPUT_GIT_REPO_URL", "https://github.com/TranDinhNhan97/checkGIt"),
         "SOURCE_LANGUAGE": os.environ.get("INPUT_SOURCE_LANGUAGE", "English"),
         "TARGET_LANGUAGE": os.environ.get("INPUT_TARGET_LANGUAGE", "Chinese"),
-        "API_KEY": os.environ.get("INPUT_API_KEY", ""),
+        "API_KEY": os.environ.get("INPUT_API_KEY", "${{ secrets.OPENAI_API_KEY }}"),
         "I18N_SURFIX": os.environ.get("INPUT_I18N_SURFIX", ""),
         "ADDITIONAL_PROMPT": os.environ.get("INPUT_ADDITIONAL_PROMPT", ""),
         "FILE_TYPES": os.environ.get("INPUT_FILE_TYPES", "md,mdx,rst,txt,py,js,json,html,cpp,c,ipynb"),
